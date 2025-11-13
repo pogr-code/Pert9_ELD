@@ -31,7 +31,7 @@ void sortTerkutukDesc(int b[],int n){
 
 int main(){
 	int n;
-	
+	int ganjil=0;genap=0;
 
 	cout << "Masukkan jumlah bilangan : ";
 	cin>>n;
@@ -53,10 +53,10 @@ int main(){
 	
 	for (int i=0;i<n;i++){
 		if (arr[i] % 2 != 0){
-			a[i]=arr[i];
+			a[ganjil++]=arr[i];
 		}
 		else{
-			b[i]=arr[i];
+			b[genap++]=arr[i];
 		}
 	}
 	sortTerkutukAsc(a,z);
@@ -64,7 +64,7 @@ int main(){
 	cout<<"Ganjil Asc : \n";
 	for (int i=0;i<z;i++){
 		cout<<a[i];
-		if (i!=n-1){
+		if (i!=z-1){
 			cout<<" , ";
 		}
 		
@@ -72,8 +72,9 @@ int main(){
 	cout<<"Genap Desc : \n";
 	for (int i=0;i<z;i++){
 		cout<<b[i];
-		if (i!=n-1){
+		if (i!=z-1){
 			cout<<" , ";
 		}
 	}
 }
+
