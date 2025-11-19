@@ -1,17 +1,6 @@
 #include <iostream>
 using namespace std;
 
-	
-	
-
-void swap(int &a, int &b){
-	int temp=a;
-	a=b;
-	b=temp;
-
-}
-
-	
 
 void text(){
 	int n;
@@ -27,11 +16,10 @@ void text(){
 			return;
 		}
 	}
-		for (int i=0;i<n-1;i++){
-			for (int j=n-1;j>i;j--){
-			if(arr[j]<arr[j+1]){
-				swap(arr[j],arr[j+1]);
-				
+	for (int i=0; i<n-1; i++) {
+		for (int j=n-1; j>i; j--) {
+			if (arr[j-1] < arr[j]) {
+				swap(arr[j-1], arr[j]);
 			}
 		}
 	}
